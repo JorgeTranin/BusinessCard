@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">BusinessCard</string>
+    <string name="name">Nome</string>
+    <string name="telefone">Telefone</string>
+    <string name="email">E-mail</string>
+    <string name="nome_da_empresa">Nome Da Empresa</string>
+    <string name="adiciona_card">adiciona card</string>
+    <string name="nome">Nome</string>
+    <string name="empresa">Empresa</string>
 </resources>
