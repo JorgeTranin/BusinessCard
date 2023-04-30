@@ -6,17 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".ui.CadastroCardActivity">
 
+    <ImageButton
+        android:id="@+id/btn_close"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="52dp"
+        android:layout_height="46dp"
+        android:contentDescription="@string/botao_de_close"
+        android:src="@drawable/ic_close"
+        android:background="?attr/actionBarItemBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        style="@style/TextAppearance.AppCompat.Title"
         android:id="@+id/tv_novo_cartao"
+        style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Novo Cartão"
+        android:text="@string/novo_cartao"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_close" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout1"
@@ -36,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/nome"
-            android:inputType="numberDecimal" />
+            android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -57,7 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/empresa"
-            android:inputType="numberDecimal" />
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -77,8 +88,8 @@
             style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Telefone para Contato"
-            android:inputType="numberDecimal" />
+            android:hint="@string/telefone_para_contato"
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -98,21 +109,44 @@
             style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="E-mail"
-            android:inputType="numberDecimal" />
+            android:hint="@string/e_mail"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout5"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tv_cor"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/cor"
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:id="@+id/btn_cadastrar"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:padding="10dp"
-        android:text="Cadastrar"
+        android:text="@string/cadastrar"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

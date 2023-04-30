@@ -7,4 +7,10 @@
     <string name="adiciona_card">adiciona card</string>
     <string name="nome">Nome</string>
     <string name="empresa">Empresa</string>
+    <string name="botao_de_close">botão de close</string>
+    <string name="novo_cartao">Novo Cartão</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="e_mail">E-mail</string>
+    <string name="telefone_para_contato">Telefone para Contato</string>
+    <string name="cor">selecione uma Cor</string>
 </resources>
