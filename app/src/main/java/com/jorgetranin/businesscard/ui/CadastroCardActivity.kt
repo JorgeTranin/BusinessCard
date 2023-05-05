@@ -1,37 +1,34 @@
 package com.jorgetranin.businesscard.ui
 
-import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.jorgetranin.businesscard.App
-import com.jorgetranin.businesscard.R
-import com.jorgetranin.businesscard.data.AppDatabase
 import com.jorgetranin.businesscard.data.Card
-import com.jorgetranin.businesscard.data.CardDao
 import com.jorgetranin.businesscard.databinding.ActivityCadastroCardBinding
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import yuku.ambilwarna.AmbilWarnaDialog
 
 class CadastroCardActivity : AppCompatActivity() {
-    private lateinit var database: AppDatabase
-    private lateinit var cardDao: CardDao
     lateinit var binding: ActivityCadastroCardBinding
+
+    private var currentColor = Color.BLUE // cor atual definida como branca
+
     private val mainViewModel: MainViewModel by viewModels {
         MainViewModelFactory((application as App).repository)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCadastroCardBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
         insertListeners()
-
+        selecionarCor()
     }
+
 
     private fun insertListeners() {
         binding.btnCadastrar.setOnClickListener {
@@ -51,4 +48,32 @@ class CadastroCardActivity : AppCompatActivity() {
             finish()
         }
     }
+
+    private fun selecionarCor() {
+        binding.btnColorPickerButton.setOnClickListener {
+            // cria uma nova caixa de diálogo de seleção de cor
+            val colorPicker = AmbilWarnaDialog(
+                this,
+                currentColor,
+                object : AmbilWarnaDialog.OnAmbilWarnaListener {
+                    override fun onCancel(dialog: AmbilWarnaDialog?) {
+                        // ação a ser realizada quando o usuário cancela a seleção de cor
+                    }
+
+                    override fun onOk(dialog: AmbilWarnaDialog?, color: Int) {
+                        // ação a ser realizada quando o usuário confirma a seleção de cor
+                        currentColor = color // atualiza a cor atual
+                        // fazer algo com a nova cor selecionada
+                        val hexColor = String.format("#%06X", 0xFFFFFF and currentColor)
+
+                        //set do texto, da cor do texto e backgroud para o usuario ver a cor que selecionou
+                        binding.tvCor.setBackgroundColor(currentColor)
+                        binding.tvCor.setText(hexColor)
+                        binding.tvCor.setTextColor(Color.WHITE)
+                    }
+                })
+            colorPicker.show() // exibe a caixa de seleção de cor
+        }
+    }
 }
+

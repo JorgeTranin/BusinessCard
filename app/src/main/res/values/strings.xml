@@ -12,5 +12,7 @@
     <string name="cadastrar">Cadastrar</string>
     <string name="e_mail">E-mail</string>
     <string name="telefone_para_contato">Telefone para Contato</string>
-    <string name="cor">selecione uma Cor</string>
+    <string name="cor">Cor</string>
+    <string name="selecionar_cor">Selecionar Cor</string>
+    <string name="Cor_padrao_tv">#E64A19</string>
 </resources>

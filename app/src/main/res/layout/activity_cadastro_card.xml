@@ -11,9 +11,9 @@
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="52dp"
         android:layout_height="46dp"
+        android:background="?attr/actionBarItemBackground"
         android:contentDescription="@string/botao_de_close"
         android:src="@drawable/ic_close"
-        android:background="?attr/actionBarItemBackground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -113,26 +113,32 @@
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout5"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/tv_cor"
+        android:layout_width="133dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:background="@color/orange"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:text="@string/Cor_padrao_tv"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+        app:srcCompat="@android:drawable/button_onoff_indicator_on" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tv_cor"
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/cor"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btn_color_picker_button"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/selecionar_cor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_cor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_cor"
+        app:layout_constraintTop_toTopOf="@+id/tv_cor" />
 
     <Button
         android:id="@+id/btn_cadastrar"
@@ -145,7 +151,7 @@
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_color_picker_button" />
 
 
 
