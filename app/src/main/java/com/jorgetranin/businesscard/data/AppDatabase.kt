@@ -8,19 +8,26 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [Card::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun userDao(): CardDao
+
+    abstract fun cardDao(): CardDao
 
     companion object {
+        private const val DATABASE_NAME: String = "card-db"
         @Volatile
         private var INSTANCE: AppDatabase? = null
-        fun getDatabase(context:Context): AppDatabase{
-            return INSTANCE ?: synchronized(this){
-                val instance = Room.databaseBuilder(context.applicationContext,
-                AppDatabase::class.java,
-                "cardDB").build()
-                INSTANCE = instance
-                instance
+
+        fun getInstance(context: Context): AppDatabase =
+            INSTANCE ?: synchronized(this) {
+                INSTANCE ?: buildDatabase(context).also { INSTANCE = it }
             }
-        }
+
+        private fun buildDatabase(context: Context) =
+            Room.databaseBuilder(
+                context.applicationContext,
+                AppDatabase::class.java, DATABASE_NAME
+            ).build()
+
     }
+
 }
+

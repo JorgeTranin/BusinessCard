@@ -13,6 +13,7 @@ class MainViewModel(private val cardRepository: CardRepository): ViewModel() {
         cardRepository.insert(card)
     }
 
+
     fun getAll(): LiveData<List<Card>>{
         return cardRepository.getAll()
     }
