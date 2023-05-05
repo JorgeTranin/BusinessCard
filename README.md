@@ -9,8 +9,7 @@ Bootcamp Santander DIO.
 
 ## Screenshots
 
-<img src="/" width=25%>
-<img src="/screeshots/Screenshot_Main.png" width=25%>   <img src="/screeshots/Screenshot_cadastro.png" width=25%>   <img src="/screeshots/Screenshot_tela_cadastro_pick_color.png" width=25%> <img src="/screeshots/Screenshot_compartilhar_card.png" width=25%>
+<img src="/screeshots/Screenshot_Main.png" width=25%> <img src="/screeshots/Screenshot_cadastro.png" width=25%> <img src="/screeshots/Screenshot_tela_cadastro_pick_color.png" width=25%> <img src="/screeshots/Screenshot_compartilhar_card.png" width=25%>
 
 ## Tecnologias utilizadas
 
