@@ -36,9 +36,11 @@ var listenershare: (View) -> Unit = {}
                    binding.cvItemCard.setCardBackgroundColor(Color.parseColor(item.color))
                    binding.cvItemCard.setOnClickListener {
                        listenershare(it)
+
                    }
                }
            }
+
 
 }
 class DiffCallback : DiffUtil.ItemCallback<Card>() {

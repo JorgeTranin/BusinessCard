@@ -15,4 +15,5 @@
     <string name="cor">Cor</string>
     <string name="selecionar_cor">Selecionar Cor</string>
     <string name="Cor_padrao_tv">#E64A19</string>
+    <string name="label_share_to">compartilhado</string>
 </resources>

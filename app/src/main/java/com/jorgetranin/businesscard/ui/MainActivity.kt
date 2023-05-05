@@ -25,6 +25,10 @@ class MainActivity : AppCompatActivity()  {
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
+        adapter.listenershare = { card ->
+            Image.share(this@MainActivity, card)
+
+        }
 
         binding.rvCards.setHasFixedSize(true);
         binding.rvCards.setLayoutManager(LinearLayoutManager(this))

@@ -2,7 +2,6 @@
 
 ## App para o projeto Criando um App de Cartão de Visitas em Kotlin da DIO
 
-
 ## Visão geral
 
 Esta é a documentação oficial do aplicativo [BusinessCard], um desafio de projeto realizado para o
@@ -10,12 +9,12 @@ Bootcamp Santander DIO.
 
 ## Screenshots
 
-<img src="/image/Screenshot_Tela_Vazia.png" width=25%>   <img src="/image/Screenshot_Tela_repositorios.png" width=25%>   <img src="/image/Screenshot_Click_item_list.png" width=25%> <img src="/image/Screenshot_compartilhamento_repos.png" width=25%>
+<img src="/" width=25%>
+<img src="/screeshots/Screenshot_Main.png" width=25%>   <img src="/screeshots/Screenshot_cadastro.png" width=25%>   <img src="/screeshots/Screenshot_tela_cadastro_pick_color.png" width=25%> <img src="/screeshots/Screenshot_compartilhar_card.png" width=25%>
 
 ## Tecnologias utilizadas
 
 O aplicativo foi desenvolvido utilizando as seguintes tecnologias:
-
 
 - Arquitetura AMVVM
 - Android Studio
